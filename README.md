@@ -3,5 +3,5 @@ Official implementation of paper "Improving Plasticity in Online Continual Learn
 
 The code is under polish and will be available soon.
 
-# Acknowledgement
+## Acknowledgement
 Special thanks to the co-author Nicolas. Our implementation is based on his work [ocl-fd's codebase](https://github.com/Nicolas1203/ocl-fd).
