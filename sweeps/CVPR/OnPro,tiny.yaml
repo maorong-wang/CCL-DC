@@ -1,0 +1,58 @@
+program         :       main.py
+method          :       grid
+project         :       OnPro,tiny
+metric:
+  name: avg_acc
+  goal: maximize
+parameters:
+  learner         :       
+    values: [OnProCCLDC, OnPro]
+  dataset         :       
+    value: tiny
+  img_size        :
+    value: 64
+  dim_in          :
+    value: 2048
+  n_classes       :
+    value: 200
+  n_tasks         :       
+    value: 100
+  optim:
+    value: AdamW
+  weight_decay:
+    value: 1e-4
+  learning_rate   :
+    value: 0.0005
+  momentum:
+    value: 0.9
+  n_runs          :
+    value: 1
+  mem_size        :
+    values: [2000, 5000, 10000]
+  mem_batch_size  :
+    value: 64
+  batch_size      :
+    value: 10
+  supervised      :
+    value: True
+  mem_iters       :
+    value: 1
+  seed            :
+    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  randaug_m:
+    value: 11
+  randaug_n:
+    value: 1
+  kd_lambda:
+    value: 2
+  tag             :
+    value: hpsearch
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - --sweep 
+  - --data-root-dir
+  - /home/USER/PATH_TO_PROJECT/data 
+  - --results-root
+  - ./sweeps/csv/

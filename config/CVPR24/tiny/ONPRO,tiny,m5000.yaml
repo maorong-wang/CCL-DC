@@ -1,0 +1,17 @@
+learner         :       OnPro
+optim           :       AdamW
+learning_rate   :       0.0005
+momentum        :       0
+weight_decay    :       0.0001
+dataset         :       tiny
+img_size        :       64
+dim_in          :       2048
+n_classes       :       200
+n_tasks         :       100
+mem_size        :       5000
+mem_batch_size  :       64
+batch_size      :       10
+nf              :       64
+tf_type         :       full
+training_type   :       inc
+seed            :       0

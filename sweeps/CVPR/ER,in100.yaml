@@ -1,0 +1,58 @@
+program         :       main.py
+method          :       grid
+project         :       ER,in100
+metric:
+  name: avg_acc
+  goal: maximize
+parameters:
+  learner         :       
+    values: [ERCCLDC, ER]
+  dataset         :       
+    value: imagenet100
+  img_size        :
+    value: 224
+  n_classes       :
+    value: 100
+  n_tasks         :       
+    value: 10
+  optim:
+    value: AdamW
+  weight_decay:
+    value: 1e-4
+  learning_rate   :
+    value: 0.0005
+  momentum:
+    value: 0.9
+  n_runs          :
+    value: 1
+  mem_size        :
+    value: 5000
+  mem_batch_size  :
+    value: 64
+  batch_size      :
+    value: 10
+  supervised      :
+    value: True
+  mem_iters       :
+    value: 1
+  seed            :
+    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  kd_lambda:
+    value: 2
+  randaug_m:
+    value: 11
+  randaug_n:
+    value: 3
+  num_workers:
+    value: 4
+  tag             :
+    value: hpsearch
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - --sweep 
+  - --data-root-dir
+  - /home/USER/PATH_TO_PROJECT/data 
+  - --results-root
+  - ./sweeps/csv/
