@@ -49,7 +49,6 @@ The hyperparameters after our hyperparameter search is located at `./sweeps/CVPR
 We save the model and memory buffer status after training for evaluation. After the training process, the model should be saved at `./checkpoints/$dataset/$learner/$memory_size/$rand_seed/model.pth` and memory buffer should be located at  `./checkpoints/$dataset/$learner/$memory_size/$rand_seed/memory.pkl`.  
 
 ## 5. Cite
-# Cite
 
 ```bibtex
 @InProceedings{Wang_2024_CVPR,
