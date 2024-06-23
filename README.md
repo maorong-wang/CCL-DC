@@ -48,5 +48,20 @@ The hyperparameters after our hyperparameter search is located at `./sweeps/CVPR
 ## 4. Model / memory buffer snapshots
 We save the model and memory buffer status after training for evaluation. After the training process, the model should be saved at `./checkpoints/$dataset/$learner/$memory_size/$rand_seed/model.pth` and memory buffer should be located at  `./checkpoints/$dataset/$learner/$memory_size/$rand_seed/memory.pkl`.  
 
+## 5. Cite
+# Cite
+
+```bibtex
+@InProceedings{Wang_2024_CVPR,
+    author    = {Wang, Maorong and Michel, Nicolas and Xiao, Ling and Yamasaki, Toshihiko},
+    title     = {Improving Plasticity in Online Continual Learning via Collaborative Learning},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {23460-23469}
+}
+```
+
 ## Acknowledgement
+Core contributors include Maorong and Nicolas.
 Special thanks to co-author Nicolas. Our implementation is based on his work [AGD-FD's codebase](https://github.com/Nicolas1203/ocl-fd).
